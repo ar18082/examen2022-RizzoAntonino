@@ -14,7 +14,7 @@ use App\Form\ChansonType;
 
 class ChansonsController extends AbstractController
 {
-    /*route de la page d'acceuil qui liste toutes les chansons*/
+    /*route de la page d'acceuil qui liste toutes les chansons il manque la date de sortie il faut utiliser format mais je ne sais plus comment faire*/
     #[Route('/', name: 'Home')]
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
