@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Modifier la chanson{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>{{ controller_name }}!</h1>
+
+</div>
+<div class="container">
+    {{form_start(form)}}
+    <div class="row">
+        <div class="col-6">{{form_row(form.titre)}}</div>
+        <div class="col-6">{{form_row(form.nomAlbum)}}</div>
+    {{form_widget(form)}}
+    {{form_end(form)}}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home page{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>{{ controller_name }}! </h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col" >Titre</th>
+                <th scope="col">Auteur</th>
+                <th scope="col" >Album</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for chanson in chansons %}
+            <tr>
+                <td> <a href="{{path('detail', {id: chanson.id})}}">{{chanson.titre}}</a></td>
+                <td>{{chanson.auteur}}</td>
+                <td>{{chanson.nomAlbum}}</td>
+                <td>{{chanson.votes}}</td>
+                <td> <a class="btn btn-primary" href="{{path('modifChanson', {id: chanson.id})}}">Modifier</a></td>
+                
+            </tr>       
+                    
+        {% endfor %}       
+        </tbody>
+    </table>
+
+   
+   
+
+</div>
+{% endblock %}

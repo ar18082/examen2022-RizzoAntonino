@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}liste des genres {% endblock %}
+
+{% block body %}
+
+
+<div class="container">
+    <h1>{{ controller_name }}!</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col" >Nom</th>
+                <th scope="col">Description</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+        {% for genre in genres %}
+            <tr>
+                <td> <a href="#">{{genre.nom}}</a></td>
+                <td>{{genre.description}}</td>  
+                <td><a class="btn btn-primary" href="{{path('modifGenre', {id: genre.id})}}">Modifier</a></td>             
+                
+            </tr>       
+                    
+        {% endfor %}     
+        </tbody>
+    </table>
+    
+       
+ 
+
+    
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+Use : 
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Property;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
+
+use pour form: 
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
+
+Documentations: 
+
+https://symfony.com/doc/current/index.html
+https://symfony.com/doc/5.4/doctrine/associations.html
+https://getbootstrap.com/
+https://developer.mozilla.org/fr/
+https://twig.symfony.com/doc/3.x/
